@@ -18,8 +18,8 @@ public class SimpleBot {
         System.out.println("Hello! My name is Shanky");
         System.out.println("I was created in "+ Calendar.getInstance().get(Calendar.YEAR));
 
-        var value = "String value";
-        var value1 = "String value";
+        String value = "String value";
+        String value1 = "String value";
         System.out.println(value.intern());
         System.out.println(value1.intern());
 
