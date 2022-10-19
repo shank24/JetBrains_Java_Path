@@ -10,7 +10,7 @@ public class SimpleBot {
 
         System.out.println("Hello! My name is Shank.");
         System.out.println("I was created in 1989.");
-        System.out.println("Please, remind me your name.");
+        System.err.println("Please, remind me your name.");
 
         String name = scanner.nextLine();
 
