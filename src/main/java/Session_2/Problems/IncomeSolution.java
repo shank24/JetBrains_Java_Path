@@ -27,6 +27,7 @@ public class IncomeSolution {
 
         System.out.print(index + 1);
     }
+
     public static double[] fillValuesForArr(int len, Scanner scanner) {
         double[] result = new double[len];
         for (int i = 0; i < len; i++) {
