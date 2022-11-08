@@ -13,17 +13,14 @@ public class Cinema_Ext {
 
     public static void main(String[] args) {
 
-        inputRowsCols("Enter the number of rows:", numberOfRows, "Enter the number of seats in each row:", numberOfSeats);
-        cinemaSeats(numberOfRows, numberOfSeats);
-        calculateIncome();
-    }
-
-    private static void inputRowsCols(String s, int numberOfRows, String s1, int numberOfSeats) {
-        System.out.println(s);
+        System.out.println("Enter the number of rows:");
         numberOfRows = scanner.nextInt();
 
-        System.out.println(s1);
+        System.out.println("Enter the number of seats in each row:");
         numberOfSeats = scanner.nextInt();
+
+        cinemaSeats(numberOfRows, numberOfSeats);
+        calculateIncome();
     }
 
     private static void calculateIncome() {
@@ -31,7 +28,11 @@ public class Cinema_Ext {
 
         int [] [] cinemaArray  = new int[numberOfRows][numberOfSeats];
 
-        inputRowsCols("Enter a row number:", rowNumber, "Enter a seat number in that row:", seatNumber);
+        System.out.println("Enter a row number:");
+        rowNumber = scanner.nextInt();
+
+        System.out.println("Enter a seat number in that row:");
+        seatNumber = scanner.nextInt();
 
 
         int totalNumberOfSeats = numberOfRows * numberOfSeats;
@@ -62,12 +63,15 @@ public class Cinema_Ext {
             System.out.println("Ticket price:" + "$8");
         }
         else {
-            cinemaSeats(numberOfRows,numberOfSeats);
             System.out.println("Ticket price:" + "$10");
+            cinemaSeats(numberOfRows,numberOfSeats);
+
         }
     }
 
     private static void cinemaSeats(int rows, int cols) {
+        int arr[][] = new int[rows][cols];
+
         System.out.println("Cinema:");
         System.out.print(" ");
         for (int i = 1; i <= cols; i++) {
@@ -78,6 +82,9 @@ public class Cinema_Ext {
         for (int i = 1; i <= rows; i++) {
             System.out.print(i);
             for (int j = 1; j <= cols ; j++) {
+                if(arr[i][j] == arr[rowNumber][seatNumber]){
+                    System.out.println(" B");
+                }
                 System.out.print(" S");
             }
             System.out.println();
