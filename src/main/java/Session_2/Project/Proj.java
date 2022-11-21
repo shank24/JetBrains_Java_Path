@@ -1,3 +1,4 @@
+/*
 package Session_2.Project;
 
 import java.util.Scanner;
@@ -29,10 +30,10 @@ public class Proj {
     public static void printMenu(String[][] cineSeats) {
         //get input from user
         System.out.println("");
-        /*System.out.println("""
+        System.out.println("""
                 1. Show the seats
                 2. Buy a ticket
-                0. Exit""");*/
+                0. Exit""");
         int option = console.nextInt();
 
         switch (option) {
@@ -76,4 +77,4 @@ public class Proj {
     }
 
 
-}
+}*/
