@@ -1,3 +1,4 @@
+/*
 package Session_2.Project;
 
 import java.util.Scanner;
@@ -76,4 +77,4 @@ public class Proj {
     }
 
 
-}
+}*/
