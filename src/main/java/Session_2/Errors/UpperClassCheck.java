@@ -7,16 +7,11 @@ public class UpperClassCheck {
 
     /* Fix this method */
     public static String toUpperCase(String str) {
-/*
-        if(str == null){
+        if (str == null) {
             return "";
-        }
-
-        else{
+        }else{
             return str.toUpperCase(Locale.ENGLISH);
         }
-*/
-        return !str.equalsIgnoreCase(null)? str.toUpperCase(Locale.ENGLISH) : "";
     }
 
     /* Do not change code below */
