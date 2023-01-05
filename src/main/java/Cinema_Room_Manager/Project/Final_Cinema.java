@@ -2,7 +2,7 @@ package Cinema_Room_Manager.Project;
 import java.util.Scanner;
 
 import static java.lang.System.out;
-public class Cinema_9 {
+public class Final_Cinema {
     static int currentIncome = 0;
     static int totalIncome = 0;
     static int ticketPrice = 0;
