@@ -1,4 +1,4 @@
-package Simple_ChatBot_Project;
+package Simple_ChatBot;
 
 import java.util.Calendar;
 
