@@ -13,7 +13,6 @@ public class SumInRange {
      */
     public static long sumInRange(int from, int to) {
         // write your code here
-        long value = to-from;
         long sum = 0;
         for (int i= from; i< to; i++) {
             sum += i;
