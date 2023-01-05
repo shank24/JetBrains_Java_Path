@@ -6,7 +6,6 @@ public class Sequence_Prob {
     final static Scanner SCANNER = new Scanner(System.in);
 
     public static void main(String[] args) {
-
         findDivisbleBy4();
     }
 
