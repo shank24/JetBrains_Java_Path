@@ -2,7 +2,7 @@ package Session_2.Project;
 
 import java.util.Scanner;
 
-public class Cinema2 {
+public class Cinema_2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner (System.in);
 

@@ -41,6 +41,7 @@ public class Cinema_5 {
         switch (option) {
             case 1 -> showTheSeats(cineSeats);
             case 2 -> buyTicket(cineSeats);
+            //case 3 -> statistics()
             case 0 -> {
                 return;
             }
