@@ -11,6 +11,17 @@ public class Java12Switch {
         char digitInHex = numericSwitchExpression(digitInDecimal);
 
         System.out.println(digitInHex);
+
+        System.out.println(stringSwitchExpression("abc"));
+    }
+
+    private static int stringSwitchExpression(String token) {
+        int tokenType  = switch (token){
+               case "123" -> 0;
+               case "abc" -> 1;
+               default -> -1;
+        };
+        return  tokenType;
     }
 
     private static char numericSwitchExpression(int digitInDecimal) {
