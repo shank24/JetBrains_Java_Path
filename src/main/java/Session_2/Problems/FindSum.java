@@ -9,12 +9,7 @@ public class FindSum {
         findSumWay2(arr);
         findSumWay3(arr);
         findSumWay4(arr);
-        
     }
-
-
-
-
 
     private static void findSumWay1(int[] numbers) {
         int sum = 0;
@@ -23,7 +18,6 @@ public class FindSum {
         }
         System.out.println(sum);
     }
-
 
     private static void findSumWay2(int[] numbers) {
         int sum = 0;
@@ -48,8 +42,5 @@ public class FindSum {
         }
         System.out.println(sum);
     }
-
-
-
 
 }
