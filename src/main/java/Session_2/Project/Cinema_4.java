@@ -30,10 +30,11 @@ public class Cinema_4 {
     public static void printMenu(String[][] cineSeats) {
         //get input from user
         System.out.println("");
-        System.out.println(
-                "1. Show the seats"+
-                "2. Buy a ticket"+
-                "0. Exit");
+        System.out.println(""+
+                "\n"+"1. Show the seats"+
+                "\n"+"2. Buy a ticket"+
+                "\n"+"0. Exit"+
+                "");
         int option = console.nextInt();
 
         switch (option) {
