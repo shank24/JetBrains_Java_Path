@@ -22,6 +22,8 @@ public class ArraySearch {
                 .findAny().isPresent();
     }
 
+
+
     public static int[] fillValuesForArr(int len, Scanner scanner) {
         int[] result = new int[len];
         for (int i = 0; i < len; i++) {
