@@ -8,7 +8,6 @@ public class CountOccurrence {
     public static void main(String[] args) {
         String input = "Shanky";
         charCount(input);
-
     }
 
     private static void charCount(String input) {
@@ -24,6 +23,9 @@ public class CountOccurrence {
                 charCountMap.put(c, 1);
             }
         }
+
+        //Lambda Way
+        charCountMap.forEach((k,v) -> System.out.println("key = " + k + " value = " + v));
 
         //Iterator Way
         Iterator<Character> iterator = charCountMap.keySet().iterator();
