@@ -1,6 +1,7 @@
-package Revision.Collections;
+package Revision.Collections.ArrayList;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class CountOccurrence {
@@ -24,6 +25,14 @@ public class CountOccurrence {
             }
         }
 
+        //Iterator Way
+        Iterator<Character> iterator = charCountMap.keySet().iterator();
+        while (iterator.hasNext()){
+            Character key = iterator.next();
+            Integer value = charCountMap.get(key);
+            System.out.println(key + " = " + value);
+        }
+        //Other way
         for (Map.Entry entry : charCountMap.entrySet()) {
             System.out.println(entry.getKey() + " " + entry.getValue());
         }

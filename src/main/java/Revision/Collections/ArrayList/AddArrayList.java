@@ -1,4 +1,4 @@
-package Revision.Collections;
+package Revision.Collections.ArrayList;
 
 import com.sun.source.tree.ArrayAccessTree;
 
