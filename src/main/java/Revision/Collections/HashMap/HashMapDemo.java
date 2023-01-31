@@ -13,8 +13,12 @@ public class HashMapDemo {
         map.put("Japan","TK");
         map.put("Canada","OT");
 
-        //Iterator over the set(pair): using entrySet()
+
         System.out.println("----1----");
+        map.forEach((k,v) -> System.out.println("key = " + k + " value = " + v));
+
+        //Iterator over the set(pair): using entrySet()
+        System.out.println("----11----");
         Iterator <Map.Entry<String,String>> iterator = map.entrySet().iterator();
         while(iterator.hasNext()){
             Map.Entry<String,String> entry = iterator.next();
