@@ -21,7 +21,9 @@ public class Chuck_Norris_Second {
     }
 
     private static void convertToBinary(char x) {
-        System.out.println(x + " = " + String.format("%7s",Integer.toBinaryString(x)).replace(" ", "0"));
+        System.out.println(x + " = " +
+                String.format("%7s",Integer.toBinaryString(x))
+                        .replace(" ", "0"));
     }
 
 }
