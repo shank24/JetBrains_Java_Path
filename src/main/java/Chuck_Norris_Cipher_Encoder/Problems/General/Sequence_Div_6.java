@@ -1,4 +1,4 @@
-package Cinema_Room_Manager.Problems;
+package Chuck_Norris_Cipher_Encoder.Problems.General;
 
 import java.util.Scanner;
 
