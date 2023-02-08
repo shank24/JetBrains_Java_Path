@@ -53,23 +53,23 @@ public class Chuck_Norris_Third {
             //**********************************************************************************************************
             counter++;//Need to increment the value of the counter******************************************************
             //**********************************************************************************************************
-            // 1. jedes Zeichen einzeln durchlaufen
+            // 1. go through each character individually
             // for (int i = 1; )
             int previous = intArray[0];
             for (int i = 1; i < intArray.length; i++) {
-                // wenn 0, und vorher 1 dann print " 00 0"
+                // if 0, and before 1 then print " 00 0"
                 if (intArray[i] == 0 && previous == 1) {
                     System.out.print(" 00 0");
-                    // wenn 0, und vorher 0, dann print "0"
+                    // if 0, and before 0, dann print "0"
                 } else if (intArray[i] == 0 && previous == 0) {
                     System.out.print("0");
-                    // wenn 1, ...
+                    // if 1, ...
                 } else if (intArray[i] == 1 && previous == 0) {
                     System.out.print(" 0 0");
                 } else if (intArray[i] == 1 && previous == 1) {
                     System.out.print("0");
                 }
-                // speichere vorheriges Element,
+                // save previous Element,
                 previous = intArray[i];
             }
 
