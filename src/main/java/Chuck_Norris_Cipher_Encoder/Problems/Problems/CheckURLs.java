@@ -15,18 +15,32 @@ public class CheckURLs {
 
         HashMap<String, String> map = new HashMap<>();
 
-
-
         String[] params = url[1].split("\\&");
 
-        for (String value : params) {
+        try{
+            for (String value : params) {
+                //System.out.println(value);
 
-            System.out.println(value);
+                String keyData[] = value.split("=");
+                String key = keyData[0].trim();
+                if(key.contains(" ")){
+                    map.put(key, "not found");
+                }
+
+                //System.out.println(key);
+                String val = keyData[1].trim();
+                //System.out.println(val);
+
+
+
+                map.put(key,val);
+
+            }
+        } catch (Exception e) {
+            System.out.println("Exception Caught");
         }
 
-        /*if(value.contains("pass")){
-            System.out.println("123");
-        }*/
+        //System.out.println(map);
 
     }
 }
