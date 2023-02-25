@@ -21,34 +21,37 @@ public class CheckURLs {
         String key = "";
         String val = "";
 
+        String []values = params[0].split("=");
 
         try{
             for (String value : params) {
-            ArrayList<String> arr = new ArrayList<>(Arrays.asList(params));
+            /*ArrayList<String> arr = new ArrayList<>(Arrays.asList(params));
                 if(arr.get(2) == ("cookie")){
                     arr.add("not found");
                 }
-                System.out.println(arr);
+                System.out.println(arr);*/
 
                 //System.out.println(value);
 
 
-                /*String keyData[] = value.split("=");
+                String keyData[] = value.split("=");
                 key = keyData[0].trim();
                 System.out.println(key);
 
-                if(key.contains("cookie")){
-                    keyData[1] = " ";
+                if(keyData[1]== null){
+                    keyData[1] = "not found";
                 }
+
                 val = keyData[1].trim();
+
                 System.out.println(val);
 
-                map.put(key,val);*/
+                map.put(key,val);
             }
         }
         catch (Exception e) {
-            //map.put(key, "not found");
-            //System.out.println("Exception Caught");
+            map.put(key, "not found");
+            System.out.println("Exception Caught");
         }
 
         System.out.println(map);
