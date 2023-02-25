@@ -13,6 +13,7 @@ public class CheckURLSol {
         for (String parameter : url) {
             String[] s = parameter.split("=");
 
+            //Constructing string object, in case of "cookie", value empty.
             if (s.length == 1) {
                 s = new String[] {s[0], "not found"};
             }
