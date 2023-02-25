@@ -1,5 +1,7 @@
 package Chuck_Norris_Cipher_Encoder.Problems.Problems;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -16,31 +18,40 @@ public class CheckURLs {
         HashMap<String, String> map = new HashMap<>();
 
         String[] params = url[1].split("\\&");
+        String key = "";
+        String val = "";
+
 
         try{
             for (String value : params) {
+            ArrayList<String> arr = new ArrayList<>(Arrays.asList(params));
+                if(arr.get(2) == ("cookie")){
+                    arr.add("not found");
+                }
+                System.out.println(arr);
+
                 //System.out.println(value);
 
-                String keyData[] = value.split("=");
-                String key = keyData[0].trim();
-                if(key.contains(" ")){
-                    map.put(key, "not found");
+
+                /*String keyData[] = value.split("=");
+                key = keyData[0].trim();
+                System.out.println(key);
+
+                if(key.contains("cookie")){
+                    keyData[1] = " ";
                 }
+                val = keyData[1].trim();
+                System.out.println(val);
 
-                //System.out.println(key);
-                String val = keyData[1].trim();
-                //System.out.println(val);
-
-
-
-                map.put(key,val);
-
+                map.put(key,val);*/
             }
-        } catch (Exception e) {
-            System.out.println("Exception Caught");
+        }
+        catch (Exception e) {
+            //map.put(key, "not found");
+            //System.out.println("Exception Caught");
         }
 
-        //System.out.println(map);
+        System.out.println(map);
 
     }
 }
