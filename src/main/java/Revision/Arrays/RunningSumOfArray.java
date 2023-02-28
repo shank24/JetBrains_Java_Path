@@ -1,4 +1,4 @@
-package Chuck_Norris_Cipher_Encoder.Problems.General;
+package Revision.Arrays;
 
 import java.util.Scanner;
 
