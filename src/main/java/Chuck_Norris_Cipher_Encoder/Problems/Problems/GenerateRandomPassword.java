@@ -24,5 +24,6 @@ public class GenerateRandomPassword {
 
         int rand = (int)(Math.random()*62);
 
+        return 0;
     }
 }
