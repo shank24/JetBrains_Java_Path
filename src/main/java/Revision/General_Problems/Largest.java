@@ -20,6 +20,9 @@ public class Largest {
         if(c>max){
             max=c;
         }
-        System.out.println(max);
+        //System.out.println(max);
+
+        int max1 = Math.max(c,Math.max(a,b));
+        System.out.println(max1);
     }
 }
