@@ -1,4 +1,4 @@
-package Revision.General_Problems;
+package DSA_Bootcamp.General;
 
 import java.util.Scanner;
 
@@ -36,7 +36,7 @@ public class Calculator {
             }
 
             else if (op == 'x' || op == 'X') {
-                    break;
+                break;
             }
 
             else{
