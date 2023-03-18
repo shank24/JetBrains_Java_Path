@@ -5,14 +5,25 @@ import java.util.Scanner;
 public class SwitchCase {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a fruit name: ");
         String fruit = scanner.next().toLowerCase().trim();
+        System.out.println("Enter a game name: ");
         String game = scanner.next().toLowerCase().trim();
+        System.out.println("Enter a number between 1 to 7: ");
+        int day = scanner.nextInt();
 
 
         fruitCases(fruit);
-
         //Optimized Way
         gameCases(game);
+        dayCases(day);
+    }
+
+    private static void dayCases(int day) {
+        switch (day){
+            case 1,2,3,4,5 -> System.out.println("Weekday");
+            case 6,7 -> System.out.println("Weekend");
+        }
     }
 
     private static void gameCases(String game) {
