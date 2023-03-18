@@ -9,7 +9,7 @@ public class SwitchCase {
         String game = scanner.next().toLowerCase().trim();
 
 
-        fruitCase(fruit);
+        fruitCases(fruit);
 
         //Optimized Way
         gameCases(game);
@@ -24,7 +24,7 @@ public class SwitchCase {
         });
     }
 
-    private static void fruitCase(String fruit) {
+    private static void fruitCases(String fruit) {
         switch (fruit) {
             case "mango" -> System.out.println("King");
             case "apple" -> System.out.println("Red");
