@@ -9,6 +9,13 @@ public class ComputeLCMnHCF {
         int n2 = in.nextInt();
 
         System.out.println(getLCM(n1,n2));
+        System.out.println(getHCF(n1,n2));
+    }
+
+    private static int getHCF(int n1, int n2) {
+        if(n2==0)
+            return n1;
+        return getHCF(n2,n1%n2);
     }
 
     private static int getLCM(int n1, int n2) {
