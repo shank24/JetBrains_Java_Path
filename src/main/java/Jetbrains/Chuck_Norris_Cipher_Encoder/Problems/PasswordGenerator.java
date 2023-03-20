@@ -1,4 +1,4 @@
-package Jetbrains.Chuck_Norris_Cipher_Encoder.Problems.Problems;
+package Jetbrains.Chuck_Norris_Cipher_Encoder.Problems;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -13,40 +13,45 @@ public class PasswordGeneratorCode {
         int c = sc.nextInt();//digits
         int n = sc.nextInt();//length
 
-        List<Character> list = new ArrayList<Character>();
-        while (list.size() < n){
-            addUpper(a,list);
-            addLower(b,list);
-            addNumbers(c,list);
-        }
-
-        StringBuilder builder = new StringBuilder();
-
-        for(int i = 0; i < n; i++){
-            builder.append(list.toArray()[i]);
-        }
-        System.out.println(builder.toString());
+            String randomPassword = "";
+            for(int j = 0; j < n; j++){
+                //Generate one random character
+                randomPassword +=  randomCharacter(a,b,c);
+            }
+        System.out.println(randomPassword);
     }
 
-    public static Character createRandomSymbol() {
-        return (char) (new Random().nextInt(26) + 'a');
-    }
+    public static char randomCharacter(int a, int b, int c){
+//Generate a random number that represents all possible
+// characters in our password
+//10 dig + 26 lower + 26 upper => 62 characters
 
-    public static void addUpper(int a, List<Character> list) {
-        for (int i = 0; i < a; i++) {
-            list.add(Character.toUpperCase(createRandomSymbol()));
-        }
-    }
+        int rand = (int)(Math.random()*62);
+        int ascii = 0;
+            //rand is btwn 0-9 => digit => 48-57
+            for (int i =0;i<c;i++){
+                if(rand<=9){
+                    ascii = rand + 48;
+                    //return (char)(ascii);
+                }
+            }
 
-    public static void addLower(int b, List<Character> list) {
-        for (int i = 0; i < b; i++) {
-            list.add(Character.toLowerCase(createRandomSymbol()));
-        }
-    }
+            //uppercase {65-90}
+            for (int i = 0;i<a; i++){
+                if(rand<=35){
+                    ascii = rand + 55; //65 -10 => 55
+                    //return (char)(ascii);
+                }
+            }
 
-    public static void addNumbers(int c, List<Character> list) {
-        for (int i = 0; i < c; i++) {
-            list.add(Character.forDigit(new Random().nextInt(10), 10));
-        }
+            //lowercase {97-122}
+            for (int i = 0;i<b; i++) {
+                if(rand<=61){
+                    ascii = rand + 61; //97 -36 => 55
+
+                }
+            }
+        return (char)(ascii);
+
     }
 }
