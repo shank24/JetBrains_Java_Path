@@ -1,4 +1,4 @@
-package Jetbrains.Chuck_Norris_Cipher_Encoder.Problems;
+package Jetbrains.Chuck_Norris_Cipher_Encoder.Random;
 
 import java.util.Random;
 
