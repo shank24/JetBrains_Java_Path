@@ -7,10 +7,10 @@ public class Middle_Of_String {
         Scanner in = new Scanner(System.in);
 
         String str = in.next();
-        System.out.println(getStringCutIn(str));
+        System.out.println(cutMiddleString(str));
     }
 
-    private static String getStringCutIn(String str) {
+    private static String cutMiddleString(String str) {
         if(str==null | str.isEmpty()){
             return str;
         }
