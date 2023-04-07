@@ -24,8 +24,8 @@
                 <configuration>
                     <skipMain>true</skipMain>
                     <skip>true</skip>
-                    <source>14</source>
-                    <target>14</target>
+                    <source>16</source>
+                    <target>16</target>
                 </configuration>
 
             </plugin>
