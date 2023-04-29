@@ -1,6 +1,8 @@
 package Revision.Strings;
 
 import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StringReverse {
     public static void main(String[] args) {
@@ -8,10 +10,13 @@ public class StringReverse {
         String str = input.nextLine();
         getReverse(str);
         getReverseWithoutMethod(str);
-        getReverseWithLambda(str);
+        System.out.println(getReverseWithLambda(str));
     }
 
-    private static void getReverseWithLambda(String str) {
+    private static String getReverseWithLambda(String str) {
+        return Stream.of(str)
+                .map(word -> new StringBuilder(word).reverse())
+                .collect(Collectors.joining(""));
     }
 
     private static void getReverseWithoutMethod(String str) {
@@ -25,7 +30,6 @@ public class StringReverse {
     }
 
     private static void getReverse(String str) {
-        StringBuffer sb = new StringBuffer(str);
-        System.out.println(sb.reverse());
+        System.out.println(new StringBuffer(str).reverse());
     }
 }
