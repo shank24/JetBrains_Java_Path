@@ -2,12 +2,13 @@ package Revision.Strings;
 
 public class RemoveAllWhiteSpace {
     public static void main(String[] args) {
-        String input= "Geeks Gor Geeks";
+        String str = StringUtilsMethod.InputString();
 
-        System.out.println(removeAllWhiteSpace(input));
+        System.out.println(removeAllWhiteSpace(str));
     }
 
     private static String removeAllWhiteSpace(String input) {
+        StringUtilsMethod.nullStrCheck(input);
         return input.replaceAll("\\s","");
     }
 }

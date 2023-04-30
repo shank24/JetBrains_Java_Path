@@ -3,20 +3,17 @@ package Revision.Strings;
 import java.util.Scanner;
 
 public class GetSpecificIndex {
-    final static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        String value = scanner.nextLine();
+        String str = StringUtilsMethod.InputString();
         char toSearch ='e';
 
-        System.out.println(findIndexOfChar(value,toSearch));
+        System.out.println(findIndexOfChar(str,toSearch));
     }
 
     private static int findIndexOfChar(String value, char toSearch) {
-        int index =0;
+        StringUtilsMethod.nullStrCheck(value);
 
-        if (value.length()<=0){
-            return 0;
-        }
+        int index =0;
 
         for (int i=0;i<=value.length()-1;i++){
             if(toSearch==value.charAt(i)){

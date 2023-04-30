@@ -7,8 +7,7 @@ import java.util.stream.Stream;
 
 public class StringReverse {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        String str = input.nextLine();
+        String str = StringUtilsMethod.InputString();
 
         getReverseViaStringBuffer(str);
         getReverseViaLoop(str);
@@ -17,7 +16,7 @@ public class StringReverse {
     }
 
     private static void getReverseViaStack(String str) {
-        nullStrCheck(str);
+        StringUtilsMethod.nullStrCheck(str);
         // Declare a stack of type Character
         Stack<Character> stack = new Stack<>();
 
@@ -41,14 +40,9 @@ public class StringReverse {
 
     }
 
-    private static void nullStrCheck(String str) {
-        if(str.length()==0 || str.isEmpty()){
-            return ;
-        }
-    }
 
     private static void getReverseViaStream(String str) {
-        nullStrCheck(str);
+        StringUtilsMethod.nullStrCheck(str);
         String reverseString = Stream.of(str)
                 .map(word -> new StringBuilder(word).reverse())
                 .collect(Collectors.joining(" "));
@@ -56,7 +50,7 @@ public class StringReverse {
     }
 
     private static void getReverseViaLoop(String str) {
-        nullStrCheck(str);
+        StringUtilsMethod.nullStrCheck(str);
         char ch[] = str.toCharArray();
         String newStr ="";
 
@@ -67,7 +61,7 @@ public class StringReverse {
     }
 
     private static void getReverseViaStringBuffer(String str) {
-        nullStrCheck(str);
+        StringUtilsMethod.nullStrCheck(str);
         System.out.println(new StringBuffer(str).reverse());
     }
 }
